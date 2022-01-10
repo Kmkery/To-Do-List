@@ -5,12 +5,14 @@ const searchForm = document.querySelector('.search-form')
 const addTodo = event => {
     event.preventDefault()
     const newTodo = event.target.add.value.trim()
-
-    todos.innerHTML +=`<li class="todo">
-    <span class="text-todo">${newTodo}</span>
-    <i class="delete bi bi-trash"></i>
-    </li>`
-    addForm.reset()
+    
+    if(newTodo.length) {
+        todos.innerHTML +=`<li class="todo">
+        <span class="text-todo">${newTodo}</span>
+        <i class="delete bi bi-trash"></i>
+        </li>`
+        addForm.reset()
+    }
 }
 
 const searchTodo = ({target:{value:inputValue}}) => {
