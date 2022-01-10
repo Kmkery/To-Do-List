@@ -1,0 +1,86 @@
+body {
+    background-color: rgb(1,0,14);
+    text-align: center;
+}
+
+.container {
+    width: 80%;
+    background-color: rgb(112,0,83);
+    margin: 40px auto;
+    padding:  0 20px 20px 20px;
+    box-sizing: border-box;
+    border: 2px solid black;
+    font-family: sans-serif;
+
+}
+
+header {
+    background-color: rgb(254,8,139);
+    margin: 0 -20px 30px -20px;
+    padding: 15px;
+    border-radius: 6px 6px 0 0;
+    font-size: 1.5em;
+    color: whitesmoke;
+}
+
+.search-box, .add-box, .todos-box {
+    background-color: rgb(188,1,116);
+    margin: 10px;
+    padding: 10px;
+    border-radius: 3px;
+    font-size: 1em;
+}
+
+.todos-box {
+    border: 1px solid rgb(76,0,46);
+    box-shadow: 2px 1px rgb(76,0,46);
+}
+
+.search-form, .add-form {
+    padding: 20px 10px;
+}
+
+label {
+    display: block;
+    color: rgb(255,196,245);
+}
+
+.search-input, .add-input {
+    margin: 10px;
+    border: none;
+    border-radius: 3px;
+    line-height: 2em;
+}
+
+.todos {
+    background-color: whitesmoke;
+    min-height: 2em;
+    margin: 0;
+    padding: 0;
+    border-radius: 3px;
+}
+
+.todo {
+    height: 2em;
+    background-color: rgb(254,8,139);
+    padding: 0 10px;
+    border: 1px solid rgba(76,0,46,.6);
+    box-shadow: 1px 2px rgb(76,0,46);
+    border-radius: 3px;
+    line-height: 2em;
+    color: whitesmoke;
+    list-style: none;
+}
+
+.text-todo {
+    float: left;
+}
+
+.delete {
+    float: right;
+    cursor: pointer;
+}
+
+.hide {
+    display: none;
+}
