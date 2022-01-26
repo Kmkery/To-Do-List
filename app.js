@@ -5,8 +5,8 @@ const searchForm = document.querySelector('.search-form')
 const addTodo = event => {
     event.preventDefault()
     const newTodo = event.target.add.value.trim()
-    
-    if(newTodo.length) {
+
+    if(newTodo.length){
         todos.innerHTML +=`<li class="todo">
         <span class="text-todo">${newTodo}</span>
         <i class="delete bi bi-trash"></i>
@@ -20,19 +20,19 @@ const searchTodo = ({target:{value:inputValue}}) => {
 
 
     todosArray.forEach(todo => {
-        const inputIsNotInTodos = !todo.textContent.toLowerCase().includes(inputValue.toLowerCase())
+        const shouldBeVisible = todo.textContent.toLowerCase().includes(inputValue.toLowerCase())
 
-        if(inputIsNotInTodos) {
-            todo.classList.add('hide')
-        } else {
+        if(shouldBeVisible) {            
             todo.classList.remove('hide')
+            return
         }
+        todo.classList.add('hide')
     })
 }
 
 const removeTodo = ({target}) => {
-    const classOfClickedElements = Array.from(target.classList)
-    if(classOfClickedElements.includes('delete')) {
+    const removeIconWasClicked = Array.from(target.classList).includes('delete')
+    if(removeIconWasClicked) {
         target.parentNode.remove()
     }
 }
