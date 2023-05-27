@@ -6,7 +6,7 @@
 
 body {
     height: 100vh; 
-    background-color: #060331;
+    background-color: #bee4b5;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -19,6 +19,7 @@ body {
     padding: 0 20px 10px 20px;
     background-color: #195809;   
     border-radius: 10px;
+    box-shadow: 1px 1px rgba(0, 76, 6, .7);
     font-family: sans-serif;
     color: #9bb49a;
 }
@@ -28,7 +29,7 @@ header {
     top: 0;
     margin: 0 -20px;
     padding: 20px;
-    background-color: #26921c;
+    background-color: #36bd2a;
     border-bottom: 2px solid #013f0e;
     border-radius: 5px 5px 0 0;
     font-family: 'Courier New', Courier, monospace;
@@ -40,10 +41,8 @@ header {
 .search-box, .add-box, .todos-box {
     margin-top: 10px;
     padding: 20px 10px;
-    background-color: #386e36;
-    border: 1px solid rgba(91, 148, 104, 0.5);
+    background-color: #359131;
     border-radius: 5px;
-    box-shadow: 1px 1px rgba(0, 76, 6, 0.5);
     font-size: 1rem;
 }
 
@@ -58,7 +57,7 @@ header {
     border: 1px solid rgb(253, 253, 253);
     border-radius: 5px;
     
-/*Para o Firefox*/
+    /*Para o Firefox*/
     scrollbar-width: thin;
     scrollbar-color: #26921c #071106;  
 }
@@ -127,6 +126,7 @@ label {
     border: 1px solid #000;
     border-radius: 5px;
     line-height: 2rem;
+    color: #b1b3b0;
 }
 
 .hide {
