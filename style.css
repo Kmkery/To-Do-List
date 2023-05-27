@@ -1,84 +1,132 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
-    background-color: rgb(1,0,14);
-    text-align: center;
+    height: 100vh; 
+    background-color: #060331;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .container {
     width: 80%;
-    background-color: rgb(112,0,83);
-    margin: 40px auto;
-    padding:  0 20px 20px 20px;
-    box-sizing: border-box;
-    border: 2px solid black;
+    max-width: 800px;
+    min-height: 90%;
+    padding: 0 20px 10px 20px;
+    background-color: #195809;   
+    border-radius: 10px;
     font-family: sans-serif;
-
+    color: #9bb49a;
 }
 
 header {
-    background-color: rgb(254,8,139);
-    margin: 0 -20px 30px -20px;
-    padding: 15px;
-    border-radius: 6px 6px 0 0;
-    font-size: 1.5em;
-    color: whitesmoke;
+    position: relative;
+    top: 0;
+    margin: 0 -20px;
+    padding: 20px;
+    background-color: #26921c;
+    border-bottom: 2px solid #013f0e;
+    border-radius: 5px 5px 0 0;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.5rem;
+    color: rgb(226, 250, 215);
+    text-align: center;
 }
 
 .search-box, .add-box, .todos-box {
-    background-color: rgb(188,1,116);
-    margin: 10px;
-    padding: 10px;
-    border-radius: 3px;
-    font-size: 1em;
+    margin-top: 10px;
+    padding: 20px 10px;
+    background-color: #386e36;
+    border: 1px solid rgba(91, 148, 104, 0.5);
+    border-radius: 5px;
+    box-shadow: 1px 1px rgba(0, 76, 6, 0.5);
+    font-size: 1rem;
 }
 
 .todos-box {
-    border: 1px solid rgb(76,0,46);
-    box-shadow: 2px 1px rgb(76,0,46);
+    height: 266px;
 }
 
-.search-form, .add-form {
-    padding: 20px 10px;
+.todos {
+    height: 226px;
+    background-color: rgb(212, 235, 212);
+    overflow-y: scroll;
+    border: 1px solid rgb(253, 253, 253);
+    border-radius: 5px;
+    
+/*Para o Firefox*/
+    scrollbar-width: thin;
+    scrollbar-color: #26921c #071106;  
+}
+
+/*Para os browsers Chrome, Edge e Safari*/
+.todos::-webkit-scrollbar { 
+    width: 15px;
+}
+
+.todos::-webkit-scrollbar-track {
+    background: rgba(91, 148, 104, 0.5);
+    border-radius: 0 4px 4px 0;
+}
+  
+.todos::-webkit-scrollbar-thumb {
+    background-color: #26921c;
+    border-radius: 0 5px 5px 0;
+    border: 2px solid rgb(142, 189, 153);
+}
+
+.todo {
+    height: 2rem;
+    background-color: rgb(212, 235, 212);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom: 1px dashed #000;
+    line-height: 2rem;
+    list-style: none;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.todo > .text-todo {
+    color: #000;
+    font-weight: 900;
+}
+
+.text-todo {
+    padding: 0 10px;
+}
+
+.delete {
+    padding: 0 20px;
+    cursor: pointer;
+}
+.delete:hover {
+    color: #ff4800;
+}
+
+.delete:active {
+    position: relative;
+    top: 2px;
 }
 
 label {
     display: block;
-    color: rgb(255,196,245);
+    margin-bottom: 5px ;
+    font-size: .875rem;
+    font-weight: bold;
 }
 
 .search-input, .add-input {
-    margin: 10px;
-    border: none;
-    border-radius: 3px;
-    line-height: 2em;
-}
-
-.todos {
-    background-color: whitesmoke;
-    min-height: 2em;
-    margin: 0;
-    padding: 0;
-    border-radius: 3px;
-}
-
-.todo {
-    height: 2em;
-    background-color: rgb(254,8,139);
-    padding: 0 10px;
-    border: 1px solid rgba(76,0,46,.6);
-    box-shadow: 1px 2px rgb(76,0,46);
-    border-radius: 3px;
-    line-height: 2em;
-    color: whitesmoke;
-    list-style: none;
-}
-
-.text-todo {
-    float: left;
-}
-
-.delete {
-    float: right;
-    cursor: pointer;
+    width: 100%;
+    padding: 0 5px;
+    background-color: #121218;
+    border: 1px solid #000;
+    border-radius: 5px;
+    line-height: 2rem;
 }
 
 .hide {
